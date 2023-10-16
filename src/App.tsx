@@ -6,26 +6,31 @@ import Contact from './components/contact'
 import About from './components/about'
 import Experience from './components/experience'
 import Feedback from './components/feedback'
-import Project from './components/project'
+// import { StarsCanvas } from './components/canvas'
+import Works from './components/works'
+import Tech from './components/tech'
+import { StarsCanvas } from './components/canvas'
 
 function App() {
 
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-         <Navbar/>
-         {/* <Hero/> */}
-        </div>
-        {/* <About/>
+        <div className='relative z-0 bg-primary '>
+          <div className='bg-hero-pattern bg-cover bg-no-repeat '>
+          <Navbar/>
+          <Hero/>
+          </div>
+        <About/>
+        <Feedback/>
         <Experience/>
-        <Project/>
-        <Feedback/> */}
+        <Tech/>
+        <Works/>
 
-       {/* <div className='relative z-0'>
-         StarCanvas 
+        <div className='relative z-0'>
+          <StarsCanvas />
         <Contact/>
-       </div>*/}
+         </div> 
+     
 
 
       </div>

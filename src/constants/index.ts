@@ -30,15 +30,64 @@ export const navLinks = [
     id: "about",
     title: "About",
   },
+ 
   {
-    id: "work",
-    title: "Work",
+    id: "tech",
+    title: "Skills",
+  },
+  {
+    id: "project",
+    title: "Projects",
   },
   {
     id: "contact",
     title: "Contact",
   },
 ];
+import { Facebook, Instagram, LinkedIn, GitHub, YouTube } from '@mui/icons-material';
+
+interface SocialItem {
+  id: number;
+  url: string;
+  icon: React.ElementType;
+  colorClass: string; 
+}
+
+export const social: SocialItem[] = [
+  {
+    id: 1,
+    url: 'https://www.facebook.com/profile.php?id=100013201639310',
+    icon: Facebook,
+    colorClass: 'text-blue-500', // Specify the color class for Facebook
+  },
+  {
+    id: 2,
+    url: 'https://www.instagram.com/h.a.r.s.h._4/',
+    icon: Instagram,
+    colorClass: 'text-red-500', // Specify the color class for Instagram
+  },
+  {
+    id: 3,
+    url: 'https://www.linkedin.com/in/harsh-goyal-b361b41b9',
+    icon: LinkedIn,
+    colorClass: 'text-blue-700', // Specify the color class for LinkedIn
+  },
+  {
+    id: 4,
+    url: 'https://github.com/harshgoyalcoder',
+    icon: GitHub,
+    colorClass: 'text-gray-500', // Specify the color class for GitHub
+  },
+  {
+    id: 5,
+    url: 'https://www.youtube.com/channel/UCsSkUi1SH0fq8T5ien9Dolw',
+    icon: YouTube,
+    colorClass: 'text-red-600', // Specify the color class for YouTube
+  },
+];
+
+
+
 
 const services = [
   {
@@ -117,10 +166,10 @@ const technologies = [
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
+    company_name: "1 ClickTech",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "July 2023 - Dec 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -133,7 +182,7 @@ const experiences = [
     company_name: "Tesla",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "April 2018 - April 2020",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -141,32 +190,32 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  // {
+  //   title: "Web Developer",
+  //   company_name: "Shopify",
+  //   icon: shopify,
+  //   iconBg: "#383E56",
+  //   date: "April 2017 - April 2018",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
+  // {
+  //   title: "Full stack Developer",
+  //   company_name: "Meta",
+  //   icon: meta,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2023 - Present",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
 ];
 
 const testimonials = [
