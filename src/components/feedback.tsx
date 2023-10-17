@@ -15,10 +15,7 @@ interface FeedbackCardProps {
 
 const FeedbackCard: React.FC<FeedbackCardProps> = ({
   index,
-  testimonial,
   name,
-  designation,
-  company,
   image,
 }) => (
   <motion.div
