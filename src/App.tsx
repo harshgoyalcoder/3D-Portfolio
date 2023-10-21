@@ -5,31 +5,45 @@ import Hero from './components/hero'
 import Contact from './components/contact'
 import About from './components/about'
 import Experience from './components/experience'
-import Feedback from './components/feedback'
-// import { StarsCanvas } from './components/canvas'
 import Works from './components/works'
 import Tech from './components/tech'
 import { StarsCanvas } from './components/canvas'
+import Parallax from './components/parallex'
 
 function App() {
 
   return (
     <BrowserRouter>
-        <div className='relative z-0 bg-primary '>
-          <div className='bg-hero-pattern bg-cover bg-no-repeat '>
+        <div>
+          <section id='Homepage' className='bg-hero-pattern  '>
           <Navbar/>
           <Hero/>
-          </div>
-        <About/>
-        <Feedback/>
-        <Experience/>
-        <Tech/>
-        <Works/>
+          </section>
 
-        <div className='relative z-0'>
+          <section id='services'>
+          <Parallax type="services" />
+         </section>
+         <section >
+
+        <About/>
+        
+        <Parallax type="Portfolio" />
+        </section>
+        <section id="experience">
+        <Experience/>
+          </section>
+        <section id="Skills">
+        <Tech/>
+          </section>
+        <section id="Works">
+        <Works/>
+          </section>
+
+
+        <section id="Contact" className='relative z-0'>
           <StarsCanvas />
         <Contact/>
-         </div> 
+         </section> 
      
 
 

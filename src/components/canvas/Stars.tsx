@@ -7,12 +7,14 @@ const Stars = (props:any) => {
   const ref = useRef<THREE.Points | null>(null); 
   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
 
-  useFrame(( delta:any) => {
+  useFrame((state:any, delta:any) => {
     if (ref.current) { // Null check
       ref.current.rotation.x -= delta / 10;
       ref.current.rotation.y -= delta / 15;
+      console.log('Current Frame:', state);
     }
   });
+
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>

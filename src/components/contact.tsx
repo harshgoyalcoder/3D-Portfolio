@@ -8,7 +8,8 @@ import  SectionWrapper  from "../hoc/SectionWrapper";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {  const formRef = useRef<HTMLFormElement | null>(null);
-
+  const isSmallScreen = window.innerWidth <= 768; // You can adjust the breakpoint
+  const initialRows = isSmallScreen ? 2 : 7;
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -70,22 +71,25 @@ const Contact = () => {  const formRef = useRef<HTMLFormElement | null>(null);
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={` h-[100vh] xl:mt-12 mt-[-100px] flex xl:flex-row flex-col-reverse sm:gap-2 overflow-hidden`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1) as any}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[0.75] bg-black-100 h-[80%] sm:h-[85%] p-4 sm:p-8 rounded-2xl'
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
+        <div className="flex flex-row sm:flex-col items-center sm:items-start gap-4">
+
+        <p className={` ${styles.sectionSubText}`}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+        </div>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-6 sm:mt-12 flex flex-col gap-2 sm:gap-8'
         >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+          <label className='flex sm:flex-col flex-row items-center sm:items-start'>
+            <span className='text-white font-medium mb-0 sm:mb-4'>Your Name</span>
             <input
               type='text'
               name='name'
@@ -95,8 +99,8 @@ const Contact = () => {  const formRef = useRef<HTMLFormElement | null>(null);
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+          <label className='flex sm:flex-col flex-row items-center sm:items-start'>
+            <span className='text-white font-medium mb-0 sm:mb-4'>Your email</span>
             <input
               type='email'
               name='email'
@@ -109,7 +113,7 @@ const Contact = () => {  const formRef = useRef<HTMLFormElement | null>(null);
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Message</span>
             <textarea
-              rows={7}
+              rows={initialRows}
               name='message'
               value={form.message}
               onChange={handleChange}
