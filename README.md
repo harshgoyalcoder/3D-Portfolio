@@ -29,3 +29,12 @@ If you are developing a production application, we recommend updating the config
 =======
 # 3D-Portfolio
 >>>>>>> ca7f360 (Initial commit)
+
+Steps to Deploy on Github Pages
+1.Checkout to main branch 
+2.make dist folder 
+3.run command -
+ npm run build
+ git add dist -f
+ git commit -m "adding dist"
+ git subtree push --prefix dist origin gh-pages
