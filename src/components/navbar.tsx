@@ -1,33 +1,12 @@
 import { navLinks, social } from "../constants";
-import { Link } from "react-router-dom";
-import { logo } from "../assets";
-import { styles } from "../styles";
-import Menu from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
 import { motion } from "framer-motion";
-import { Close } from "@mui/icons-material";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Sidebar from "./sidebar";
 
 export default function Navbar() {
   const [active, setActive] = useState<string>("");
-  const [toggle, setToggle] = useState<Boolean>(false);
-  const [scrolled, setScrolled] = useState<Boolean>(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
     <div className={` h-4`}>
       <Sidebar />
