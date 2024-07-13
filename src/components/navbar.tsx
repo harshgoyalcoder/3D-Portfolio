@@ -15,10 +15,10 @@ export default function Navbar() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-white text-[16px] font-bold cursor-pointer  sm:block hidden"
+          className="text-white text-[20px] font-bold cursor-pointer  sm:block hidden"
         >
           Harsh Goyal &nbsp;
-          <span> | React Developer</span>
+          <span> | Full Stack Developer</span>
         </motion.span>
 
         {/* Navbar Items */}
@@ -28,7 +28,7 @@ export default function Navbar() {
               key={nav.id}
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              } hover:text-white text-[22px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>

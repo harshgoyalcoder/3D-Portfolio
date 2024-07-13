@@ -39,7 +39,7 @@ const sliderVariants = {
 
 export default function Hero() {
   return (
-    <div className="mt-10 lg:mt-20   h-[calc(100vh-50px)] p-12 sm:p-4 flex justify-between overflow-hidden bg-gradient-to-b from-[#0c0c1d] to-[#111132] relative">
+    <div className=" mt-10 lg:mt-20   h-[calc(100vh-50px)] p-12 sm:p-4 flex justify-between overflow-hidden from-[#0c0c1d] to-[#111132] relative">
       <div className="max-w-screen-xl h-full  my-12">
         <motion.div
           className="textContainer w-full h-full flex flex-col  justify-start items-center gap-auto sm:h-1/2 lg:w-1/2 lg:gap-8 lg:items-center lg:text-center"
@@ -76,7 +76,7 @@ export default function Hero() {
         </motion.div>
       </div>
       <motion.div
-        className="absolute text-[50vh] bottom-[-120px] whitespace-nowrap text-[#ffffff09] w-1/2 font-bold"
+        className="absolute text-[50vh] bottom-[-120px] whitespace-nowrap text-[#ffffff10] w-1/2 font-bold"
         variants={sliderVariants as any}
         initial="initial"
         animate="animate"
