@@ -1,56 +1,49 @@
 // import './App.css'
-import { BrowserRouter } from 'react-router-dom'
-import Navbar from './components/navbar'
-import Hero from './components/hero'
-import Contact from './components/contact'
-import About from './components/about'
-import Experience from './components/experience'
-import Works from './components/works'
-import Tech from './components/tech'
-import { StarsCanvas } from './components/canvas'
-import Parallax from './components/parallex'
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/navbar";
+import Hero from "./components/hero";
+import Contact from "./components/contact";
+import About from "./components/about";
+import Experience from "./components/experience";
+import Works from "./components/works";
+import Tech from "./components/tech";
+import { StarsCanvas } from "./components/canvas";
+import Parallax from "./components/parallex";
 
 function App() {
-
   return (
     <BrowserRouter>
-        <div>
-          <section id='Homepage' className='bg-hero-pattern  '>
-          <Navbar/>
-          <Hero/>
-          </section>
+      <div>
+        <section id="Homepage" className="bg-hero-pattern  ">
+          <Navbar />
+          <Hero />
+        </section>
 
-          <section id='services'>
+        <section id="services">
           <Parallax type="services" />
-         </section>
-         <section >
+        </section>
+        <section>
+          <About />
 
-        <About/>
-        
-        <Parallax type="Portfolio" />
+          <Parallax type="Portfolio" />
         </section>
         <section id="experience">
-        <Experience/>
-          </section>
+          <Experience />
+        </section>
         <section id="Skills">
-        <Tech/>
-          </section>
+          <Tech />
+        </section>
         <section id="Works">
-        <Works/>
-          </section>
+          <Works />
+        </section>
 
-
-        <section id="Contact" className='relative z-0'>
+        <section id="Contact" className="relative z-0">
           <StarsCanvas />
-        <Contact/>
-         </section> 
-     
-
-
+          <Contact />
+        </section>
       </div>
-
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
