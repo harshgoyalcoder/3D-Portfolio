@@ -31,7 +31,7 @@ const sliderVariants = {
     x: "-220%",
     transition: {
       repeat: Infinity,
-      repeatType:"mirror",
+      repeatType: "mirror",
       duration: 20,
     },
   },
@@ -47,20 +47,32 @@ export default function Hero() {
           initial="initial"
           animate="animate"
         >
-          
-          <motion.h2 variants={textVariants} className={`${styles.heroHeadText} text-white`}>
-          Hi, I'm <span className='text-[#915EFF]'>Harsh</span>
+          <motion.h2
+            variants={textVariants}
+            className={`${styles.heroHeadText} text-white`}
+          >
+            Hi, I'm <span className="text-[#915EFF]">Harsh</span>
           </motion.h2>
-          <motion.h1 variants={textVariants} className={`${styles.heroSubText}   text-white-100`}>
+          <motion.h1
+            variants={textVariants}
+            className={`${styles.heroSubText}   text-white-100`}
+          >
             Web developer and UI designer
           </motion.h1>
-          <motion.div variants={textVariants} >
-            <motion.button variants={textVariants} className="p-2 lg:text-[16px] text-[14px] h-14  lg:p-5 mb-4 border border-white rounded-lg bg-transparent text-white mr-5 sm:mr-2 cursor-pointer font-light">
+          <motion.div variants={textVariants}>
+            <motion.button
+              variants={textVariants}
+              className="p-2 lg:text-[16px] text-[14px] h-14  lg:p-5 mb-4 border border-white rounded-lg bg-transparent text-white mr-5 sm:mr-2 cursor-pointer font-light"
+            >
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants} className="p-2 lg:text-[16px] text-[14px] h-14  lg:p-5 border border-white rounded-lg bg-transparent text-white  cursor-pointer font-light">Contact Me</motion.button>
+            <motion.button
+              variants={textVariants}
+              className="p-2 lg:text-[16px] text-[14px] h-14  lg:p-5 border border-white rounded-lg bg-transparent text-white  cursor-pointer font-light"
+            >
+              Contact Me
+            </motion.button>
           </motion.div>
-          
         </motion.div>
       </div>
       <motion.div
@@ -71,11 +83,13 @@ export default function Hero() {
       >
         Writer Content Creator Influencer
       </motion.div>
-      <div className=" sm:h-1/2  bottom-2 lg:h-full absolute lg:top-0 lg:right-0">
-        <img className="w-full h-full object-cover" src="/images/hero.png" alt="" />
+      <div className=" sm:h-1/2  bottom-2 lg:h-full absolute lg:top-0 lg:right-20">
+        <img
+          className="w-full h-full object-cover"
+          src="/images/hero.png"
+          alt=""
+        />
       </div>
     </div>
-
   );
-};
-
+}
