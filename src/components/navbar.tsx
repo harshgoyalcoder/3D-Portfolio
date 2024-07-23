@@ -37,7 +37,7 @@ export default function Navbar() {
         </ul>
         {/* Social icons */}
         <div className="flex"></div>
-        <ul className="list-none flex justify-between mx-5 items-center gap-0 lg:gap-5">
+        <ul className="list-none flex justify-between mx-0 items-center gap-4 lg:gap-5">
           {social.map((socialIcon) => {
             const { id, url, icon: Icon, colorClass } = socialIcon; // Destructure the icon and colorClass
             return (

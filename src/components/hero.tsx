@@ -62,9 +62,9 @@ export default function Hero() {
           <motion.div variants={textVariants}>
             <motion.button
               variants={textVariants}
-              className="p-2 lg:text-[16px] text-[14px] h-14  lg:p-5 mb-4 border border-white rounded-lg bg-transparent text-white mr-5 sm:mr-2 cursor-pointer font-light"
+              className="p-0 lg:text-[16px] text-[14px] h-14  lg:p-5 mb-4 border border-white rounded-lg bg-transparent text-white mr-5 sm:mr-2 cursor-pointer font-light"
             >
-              See the Latest Works
+              See my Latest Works
             </motion.button>
             <motion.button
               variants={textVariants}
